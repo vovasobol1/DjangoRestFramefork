@@ -23,4 +23,6 @@ from myApp.views import PeopleAPIView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/peoplelist/', PeopleAPIView.as_view()),
+    path('api/v1/peoplelist/<int:pk>/', PeopleAPIView.as_view()),
+    path('api/v1/peoplelist/delete/<int:pk>/', PeopleAPIView.as_view()),
 ]
